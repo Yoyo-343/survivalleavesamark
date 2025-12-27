@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dungeon Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Survival Leaves a Mark</h1>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <label for="imageUpload" class="upload-btn">
+                    <img src="backpack-icon.png" alt="Choose" class="upload-icon-img">
+                    Choose Image
+                    <input type="file" id="imageUpload" accept="image/*" hidden>
+                </label>
+            </section>
+
+            <section class="controls" id="controls" style="display: none;">
+                <div class="control-group">
+                    <label for="threshold">
+                        Threshold: <span id="thresholdValue">15</span>
+                    </label>
+                    <input type="range" id="threshold" min="0" max="155" value="15">
+                </div>
+
+                <div class="presets">
+                    <button class="preset-btn" data-threshold="15">Tier 5: Common</button>
+                    <button class="preset-btn" data-threshold="50">Tier 4: Uncommon</button>
+                    <button class="preset-btn" data-threshold="85">Tier 3: Rare</button>
+                    <button class="preset-btn" data-threshold="120">Tier 2: Epic</button>
+                    <button class="preset-btn" data-threshold="155">Tier 1: Legendary</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="downloadBtn" class="download-btn">
+                        💾 Download PNG
+                    </button>
+                    <button id="shareBtn" class="share-btn">
+                        🐦 Share on X
+                    </button>
+                    <button id="resetBtn" class="reset-btn">
+                        🔄 New Image
+                    </button>
+                </div>
+            </section>
+
+            <section class="canvas-section" id="canvasSection" style="display: none;">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </section>
+
+            <section class="placeholder" id="placeholder">
+                <div class="placeholder-content">
+                    <img src="skull-icon.png" alt="Skull Icon" class="placeholder-icon">
+                    <p>Upload an image to begin</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://lootsurvivor.io/" target="_blank" rel="noopener noreferrer" class="footer-link">Play Loot Survivor</a>
+                <img src="skull-icon.png" alt="•" class="footer-separator">
+                <a href="https://empire.realms.world/trade/beasts" target="_blank" rel="noopener noreferrer" class="footer-link">Buy & Sell Beasts</a>
+                <img src="skull-icon.png" alt="•" class="footer-separator">
+                <a href="https://www.summit.game/" target="_blank" rel="noopener noreferrer" class="footer-link">Play Summit</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
