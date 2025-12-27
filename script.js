@@ -167,7 +167,7 @@ async function shareToX() {
     try {
         // Convert canvas to blob
         canvas.toBlob(async function(blob) {
-            const shareText = 'Check out my Loot Survivor filtered image! 🎮⚔️ #LootSurvivor';
+            const shareText = 'Check out my Loot Survivor filtered image! 🎮⚔️\n\nGet yours now: https://survivalleavesamark.vercel.app/';
             
             try {
                 // Try to copy image to clipboard
